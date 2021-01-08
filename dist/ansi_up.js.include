@@ -31,7 +31,7 @@ var AnsiUp = (function () {
         set: function (arg) {
             this._use_classes = arg;
         },
-        enumerable: true,
+        enumerable: false,
         configurable: true
     });
     Object.defineProperty(AnsiUp.prototype, "escape_for_html", {
@@ -41,7 +41,7 @@ var AnsiUp = (function () {
         set: function (arg) {
             this._escape_for_html = arg;
         },
-        enumerable: true,
+        enumerable: false,
         configurable: true
     });
     Object.defineProperty(AnsiUp.prototype, "url_whitelist", {
@@ -51,7 +51,7 @@ var AnsiUp = (function () {
         set: function (arg) {
             this._url_whitelist = arg;
         },
-        enumerable: true,
+        enumerable: false,
         configurable: true
     });
     AnsiUp.prototype.setup_palettes = function () {

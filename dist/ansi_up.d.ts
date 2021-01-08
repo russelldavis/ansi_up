@@ -37,9 +37,12 @@ export default class AnsiUp {
     private _url_whitelist;
     private _buffer;
     constructor();
-    use_classes: boolean;
-    escape_for_html: boolean;
-    url_whitelist: {};
+    set use_classes(arg: boolean);
+    get use_classes(): boolean;
+    set escape_for_html(arg: boolean);
+    get escape_for_html(): boolean;
+    set url_whitelist(arg: {});
+    get url_whitelist(): {};
     private setup_palettes;
     private escape_txt_for_html;
     private append_buffer;
