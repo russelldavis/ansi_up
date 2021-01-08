@@ -48,7 +48,7 @@ interface TextPacket {
 // MAIN CLASS
 //
 
-class AnsiUp
+export default class AnsiUp
 {
     VERSION = "4.0.3";
 
