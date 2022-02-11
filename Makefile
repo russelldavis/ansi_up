@@ -5,7 +5,8 @@ REPORTER = dot
 
 typescript:
 		./node_modules/.bin/tsc -p .
-		cat ./umd.header ./dist/ansi_up.js ./umd.footer > ansi_up.js
+# 		cat ./umd.header ./dist/ansi_up.js ./umd.footer > ansi_up.js
+		cat ./dist/ansi_up.js > ansi_up.js
 		mv  ./dist/ansi_up.js ./dist/ansi_up.js.include
 		mv  ./dist/cli.js .
 		node ./scripts/fix-typings.js

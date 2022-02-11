@@ -1,22 +1,3 @@
-/*  ansi_up.js
- *  author : Dru Nelson
- *  license : MIT
- *  http://github.com/drudru/ansi_up
- */
-(function (root, factory) {
-    if (typeof define === 'function' && define.amd) {
-        // AMD. Register as an anonymous module.
-        define(['exports'], factory);
-    } else if (typeof exports === 'object' && typeof exports.nodeName !== 'string') {
-        // CommonJS
-        factory(exports);
-    } else {
-        // Browser globals
-        var exp = {};
-        factory(exp);
-        root.AnsiUp = exp.default;
-    }
-}(this, function (exports) {
 var __makeTemplateObject = (this && this.__makeTemplateObject) || function (cooked, raw) {
     if (Object.defineProperty) { Object.defineProperty(cooked, "raw", { value: raw }); } else { cooked.raw = raw; }
     return cooked;
@@ -429,6 +410,3 @@ var __makeTemplateObject = (this && this.__makeTemplateObject) || function (cook
     var templateObject_1, templateObject_2, templateObject_3;
 });
 //# sourceMappingURL=ansi_up.js.map
-    Object.defineProperty(exports, "__esModule", { value: true });
-    exports.default = AnsiUp;
-}));

@@ -1,3 +1,25 @@
 #!/usr/bin/env node
 'use strict';
-require('../cli.js').main();
+// require('../cli.js').main();
+const AnsiUp = require("../ansi_up").default;
+const ansi_up = new AnsiUp();
+
+function runStream(stream) {
+    return stream.on('data', function (chunk) {
+        return process.stdout.write(ansi_up.ansi_to_html(chunk));
+    });
+};
+
+function main() {
+  process.stdin.setEncoding('utf8');
+  runStream(process.stdin);
+
+  // if (file) {
+  //     const stream = require('fs').createReadStream(file, {encoding: 'utf8'});
+  //     htmlStream(stream);
+  // } else {
+  //     process.stdin.setEncoding('utf8');
+  //     htmlStream(process.stdin);
+  // }
+}
+main();
